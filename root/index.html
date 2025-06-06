@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latvijas Viktorīna</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Latvijas Viktorīna 🎯</h1>
+  </header>
+
+  <main class="quiz-container" id="quiz-center">
+    <div id="progress">📊 Jautājums 1 no 15</div>
+    <img id="question-image" src="q1.jpg" alt="Attēls">
+    <h2 id="question-text">Lūdzu, Uzgaidiet!</h2>
+    <div id="answers"></div>
+    <button id="next-btn">➡️ Nākamais jautājums</button>
+  </main>
+
+  <section id="result-container" class="hidden">
+    <h2 id="score">Tavs rezultāts vēl nav pieejams.</h2>
+    <p id="message"></p>
+    <p id="last-score"></p>
+    <button id="restart-btn" onclick="location.reload()">🔁 Sākt no jauna</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Arthur Gruzbarzdis | Izstrādāts 🇱🇻 ar ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
