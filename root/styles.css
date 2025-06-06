@@ -1,0 +1,136 @@
+/* Pamata iestatījumi */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('bg.jfif');
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Galvene un kājene */
+header, footer {
+  background-color: #535BF9;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Viktorīnas un rezultātu konteiners */
+.quiz-container, #result-container {
+  padding: 1rem;
+  max-width: 600px;
+  width: 100%; /* <- ensures both take full width up to max-width */
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 15px 30px 40px rgba(83, 91, 249, 3.0);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box; /* <- prevents content from expanding */
+}
+
+
+/* Attēls */
+#question-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Jautājuma teksts */
+#question-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Atbilžu pogas */
+#answers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+#answers button {
+  padding: 0.75rem;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#answers button:hover {
+  background-color: #0077cc;
+  color: white;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+}
+
+/* Nākamais jautājums poga */
+#next-btn {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+#next-btn:hover {
+  background-color: #005fa3;
+}
+
+/* Beigu poga (restart) */
+#restart-btn {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#restart-btn:hover {
+  background-color: #005fa3;
+}
+
+/* Progresija */
+#progress {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Paslēptie elementi */
+.hidden {
+  display: none;
+}
+
+/* Responsīvs dizains mobilajām ierīcēm */
+@media (max-width: 600px) {
+  .quiz-container, #result-container {
+    padding: 0.75rem;
+    margin: 1rem;
+  }
+
+  #question-text {
+    font-size: 1rem;
+  }
+
+  #answers button, #next-btn, #restart-btn {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
+
